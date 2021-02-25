@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary: white;
+}
+html {
+  background-color: var(--primary);
+  transition: all 400ms ease;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
+a {
+  z-index: 99999;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  text-decoration: none;
+  font-size: 2.3em;
+  background-color: #ecf0f1;
+  border: 2px solid rgba(240, 235, 235, 0.5);
+  box-shadow: 0 0 10px #ecf0f1, 0 0 20px #bdc3c7, 0 0 40px #bdc3c7;
+  border-radius: 50%;
+  transition: all 200ms ease;
+}
+a:hover {
+  border: 0;
+  background: none;
+  box-shadow: none;
+  font-size: 4em;
+}
+
+.container a:hover i {
+  color: white;
+  animation-delay: 200ms;
+  animation: deg 400ms ease-out;
+}
+@keyframes deg {
+  0% {
+    transform: rotate(0) skew(10deg);
+  }
+  30% {
+    transform: rotate(20deg) skew(0);
+  }
+
+  100% {
+    transform: rotate(-20deg) skew(-5deg);
+  }
+}
+a i.fa-facebook-f {
+  color: #2980b9;
+}
+a i.fa-twitter {
+  color: #3498db;
+}
+a i.fa-instagram {
+  color: #e74c3c;
+}
+a i.fa-yahoo {
+  color: #8e44ad;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    width: 60%;
+  }
+}

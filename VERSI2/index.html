@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel sosmed</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <a data-color="#2980b9"> <i class="fab fa-facebook-f"></i></a>
+      <a data-color="#3498db"> <i class="fab fa-twitter"></i></a>
+      <a data-color="#e74c3c"><i class="fab fa-instagram"></i></a>
+      <a data-color="#9b59b6"><i class="fab fa-yahoo"></i></a>
+    </div>
+    <script>
+      let root = document.querySelector(":root");
+      let tagA = document.querySelectorAll("a");
+
+      tagA.forEach((tag) => {
+        tag.addEventListener("mouseover", function () {
+          root.style.setProperty("--primary", this.dataset.color);
+          //   console.log(this.dataset.color);
+        });
+      });
+    </script>
+  </body>
+</html>
